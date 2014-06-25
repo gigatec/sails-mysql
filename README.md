@@ -3,6 +3,19 @@
 MySQL adapter for the Sails framework and Waterline ORM.  Allows you to use MySQL via your models to store and retrieve data.  Also provides a `query()` method for a direct interface to execute raw SQL commands.
 
 
+## gigatec Adjustments
+
+New comparator notLike.
+
+```javascript
+.where({ name: { notLike: 'A%' } })
+```
+
+Custom SQL Support/Hack.
+
+```javascript
+.where({ sql: 'LENGTH(name) > 3' })
+```
 
 ## Installation
 
