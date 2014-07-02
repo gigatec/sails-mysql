@@ -17,6 +17,15 @@ Custom SQL Support/Hack.
 .where({ sql: 'LENGTH(name) > 3' })
 ```
 
+Custom JOIN + WHERE Support/Hack (gigatec/waterline needed).
+
+```javascript
+Table1.find(null, {
+  join_sql: [ 'LEFT JOIN table2 ON table2.id = table1.id', 'LEFT JOIN table3 ON table2.id = table1.id' ],
+  where_sql: [ 'table2.active = 1', 'table3.enabled = 1' ]
+})
+```
+
 ## Installation
 
 Install from NPM.
